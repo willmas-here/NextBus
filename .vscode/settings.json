@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "C:\\Users\\Willma\\miniconda3\\envs\\NextBus\\python.exe",
+    "python.autoComplete.extraPaths": ["./src\\NextBus"],
+}
