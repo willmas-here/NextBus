@@ -1,0 +1,44 @@
+body{
+    background-color:#f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+footer{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.container{
+    margin:auto;
+    margin-top: 30px;
+    width: 50%;
+}
+
+.item{
+    margin: auto;
+    padding: 10px;
+    background-color: #808080;
+    border-radius: 20px;
+}
+
+#stopRoute{
+    text-align: center;
+}
+
+#searchBar{
+    margin: auto;
+    text-align: center;
+}
+
+#results{
+    margin: 0px;
+    margin-top: 30px;
+}

@@ -1,0 +1,65 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NextBus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'ctb/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>NextBus by Willma</h1>
+        </header>
+
+        {% block selection %}
+        
+
+        <div id="selection">
+            <!-- I'll just do route for now -->
+            <div id="toggleSwitch">
+                <!--toggle switch-->
+            </div>
+
+            <div id="stopRoute">
+                <!--stop route text-->
+            </div>
+            
+            
+            <div id="searchBar">
+                <!--search bar-->
+                <form>
+                    <label for="userInput">Route:</label>
+                    <input type="search" id="userInput">
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block route_label %}
+        <h2>12A</h2>
+        {% endblock %}
+
+        {% block results %}
+        <div id="results">
+            <!--results-->
+            <div class="item">
+                <p>route</p>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+
+    
+
+    <footer class="footer">
+        <p>NextBus by Willma &copy; Willma 2021</p>
+    </footer>
+
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>
