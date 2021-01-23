@@ -17,7 +17,6 @@
         </header>
 
         {% block selection %}
-        
 
         <div id="selection">            
             <div id="searchBar">
@@ -28,17 +27,12 @@
         </div>
         {% endblock %}
 
-        <h2>
-            {% block route_label %}12A{% endblock %}
-        </h2>
+        <div id="route">
+            <h2>{% block route_label %}12A{% endblock %}</h2>
+        </div>
 
         {% block results %}
-        <div id="results">
-            <!--results-->
-            <div class="item">
-                <p>route</p>
-            </div>
-        </div>
+
         {% endblock %}
     </div>
 

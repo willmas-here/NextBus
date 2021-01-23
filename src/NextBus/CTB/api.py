@@ -82,5 +82,7 @@ def get_eta(company, stop_id, route):
     return eta_data
 
 if __name__ == "__main__":
-    print(get_route_stop('ctb', '1', 'inbound'))
+    dic = get_eta('ctb', '002403', '1')
+    for key, val in dic.items():
+        print(key, val)
     

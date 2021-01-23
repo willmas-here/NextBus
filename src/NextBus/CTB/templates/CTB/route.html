@@ -16,16 +16,18 @@
         <td class="result-column">
             {% if not circular %}
                 {% for stop in stops_i %}
+                    {% url 'CTB:stop' route_num=route.route stop_num=stop.stop as eta_url %}
                     <div class="result-item">
-                        <p class="stop-name">{{ stop.name_en }}</p>
+                        <a class="stop-name" href="{{ eta_url }}">{{ stop.name_en }}</a>
                     </div>
                 {% endfor %}
             {% endif %}
         </td>
         <td class="result-column">
             {% for stop in stops_o %}
+                {% url 'CTB:stop' route_num=route.route stop_num=stop.stop as eta_url %}
                 <div class="result-item">
-                    <p class="stop-name">{{ stop.name_en }}</p>
+                    <a class="stop-name" href="{{ eta_url }}">{{ stop.name_en }}</a>
                 </div>
             {% endfor %}
         </td>

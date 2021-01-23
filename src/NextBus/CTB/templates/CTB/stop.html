@@ -1,0 +1,27 @@
+{% extends 'CTB/base.html' %}
+
+{% block route_label %}{{ route.route }}{% endblock %}
+
+{% block results %}
+<div id="destination">
+    <h2>{{ eta_data.dest_en }}</h2>
+</div>
+
+
+<table id="table">
+    <tr>
+        <th>ETA</th>
+        <th>{% if has_remark %}Remarks{% endif %}</th>
+    </tr>
+    {% for eta in eta_formatted %}
+    <tr>
+        <td class="result-column">
+            <p>{{ eta.eta }}</p>
+        </td>
+        <td class="result-column">
+            {% if has_remark %}<p>{{ eta.rmk_en }}</p>{% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
