@@ -13,36 +13,24 @@
 <body>
     <div class="container">
         <header>
-            <h1>NextBus by Willma</h1>
+            <h1>NextBus</h1>
         </header>
 
         {% block selection %}
         
 
-        <div id="selection">
-            <!-- I'll just do route for now -->
-            <div id="toggleSwitch">
-                <!--toggle switch-->
-            </div>
-
-            <div id="stopRoute">
-                <!--stop route text-->
-            </div>
-            
-            
+        <div id="selection">            
             <div id="searchBar">
-                <!--search bar-->
                 <form>
-                    <label for="userInput">Route:</label>
-                    <input type="search" id="userInput">
+                    {{ route_form }}
                 </form>
             </div>
         </div>
         {% endblock %}
 
-        {% block route_label %}
-        <h2>12A</h2>
-        {% endblock %}
+        <h2>
+            {% block route_label %}12A{% endblock %}
+        </h2>
 
         {% block results %}
         <div id="results">
@@ -57,7 +45,7 @@
     
 
     <footer class="footer">
-        <p>NextBus by Willma &copy; Willma 2021</p>
+        <p>NextBus &copy; Willma 2021</p>
     </footer>
 
     <!-- <script src="main.js"></script> -->

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Route(models.Model):
@@ -15,6 +16,9 @@ class Route(models.Model):
 
     def __str__(self):
         return self.route
+
+    def get_absolute_url(self):
+        return reverse('CTB:route', kwargs={'route_num':str(self.route)})
 
 
 class Stop(models.Model):

@@ -1,0 +1,34 @@
+{% extends 'CTB/base.html' %}
+
+{% block route_label %}{{ route.route }}{% endblock %}
+
+{% block results %}
+<table id="table">
+    <tr>
+        <th>
+            {% if not circular %}To: {{ route.orig_en }}{% endif %}
+        </th>
+        <th>
+            To: {{ route.dest_en }}
+        </th>
+    </tr>
+    <tr>
+        <td class="result-column">
+            {% if not circular %}
+                {% for stop in stops_i %}
+                    <div class="result-item">
+                        <p class="stop-name">{{ stop.name_en }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </td>
+        <td class="result-column">
+            {% for stop in stops_o %}
+                <div class="result-item">
+                    <p class="stop-name">{{ stop.name_en }}</p>
+                </div>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
+{% endblock %}

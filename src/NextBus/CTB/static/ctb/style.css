@@ -29,6 +29,10 @@ h2{
     border-radius: 20px;
 }
 
+.result-column{
+    vertical-align: top;
+}
+
 #stopRoute{
     text-align: center;
 }
